@@ -48,7 +48,7 @@ export default function Authenticated({
 
     return (
         <div className="">
-            <header className=" z-20 w-full">
+            <header className="z-20 w-full ">
                 <div className="flex items-center w-full px-2 py-4 bg-white border-b border-black xl:px-16">
                     <div className="flex items-center lg:flex-col md:mx-auto gap-x-2">
                         <div className="block md:hidden ">
@@ -63,53 +63,7 @@ export default function Authenticated({
                         >
                             LOREM IPSUM
                         </Link>
-                        <div className="block lg:hidden ">
-                            <div className="flex items-center ">
-                                <div className="absolute right-0 px-2">
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger className="">
-                                            <UserIcon className="h-5 stroke-black fill-white" />
-                                        </DropdownMenuTrigger>
 
-                                        <DropdownMenuContent className="bg-white border rounded-lg shadow-lg">
-                                            <DropdownMenuLabel>
-                                                <div className="flex items-center">
-                                                    <div className="flex-shrink-0">
-                                                        <UserIcon className="h-5 stroke-black fill-white" />
-                                                    </div>
-                                                    <div className="ml-3">
-                                                        <div className="leading-none text-black "></div>
-                                                        <div className="text-xs leading-none text-gray-400 "></div>
-                                                    </div>
-                                                </div>
-                                            </DropdownMenuLabel>
-                                            <DropdownMenuSeparator />
-                                            <DropdownMenuItem>
-                                                <Link
-                                                    href="/profile"
-                                                    className="block w-full"
-                                                >
-                                                    Your Profile
-                                                </Link>
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem>
-                                                <Link
-                                                    href="/settings"
-                                                    className="block w-full"
-                                                >
-                                                    Settings
-                                                </Link>
-                                            </DropdownMenuItem>
-
-                                            <DropdownMenuSeparator />
-                                            <DropdownMenuItem>
-                                                Logout
-                                            </DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
-                                </div>
-                            </div>
-                        </div>
                         <div className="hidden lg:block">
                             <div className="flex items-center gap-x-4 ">
                                 <div className="w-20  h-[1px]  bg-black "></div>
@@ -118,21 +72,67 @@ export default function Authenticated({
                             </div>
                         </div>
                     </div>
-                    <div className="hidden md:block ">
-                        <div className="flex gap-x-6">
-                            <Link
-                                href={route("login")}
-                                className="text-xl font-kaisei hover:underline underline-offset-2 decoration-1"
-                            >
-                                SIGN IN
-                            </Link>
-                            <Link
-                                href={route("register")}
-                                className="text-xl font-kaisei hover:underline underline-offset-2 decoration-1"
-                            >
-                                REGISTER
-                            </Link>
-                        </div>
+                    <div className="hidden md:block">
+                        {user ? (
+                            <DropdownMenu>
+                                <DropdownMenuTrigger>
+                                    <UserIcon className="h-6 stroke-black fill-white" />
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className="bg-white border rounded-lg shadow-lg">
+                                    <DropdownMenuLabel>
+                                        <div className="flex items-center">
+                                            <UserIcon className="h-5 stroke-black fill-white" />
+                                            <span className="ml-2 text-black">
+                                                {user.name}
+                                            </span>
+                                        </div>
+                                    </DropdownMenuLabel>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <Link
+                                            href="/profile"
+                                            className="block w-full font-baskervville"
+                                        >
+                                            Your Profile
+                                        </Link>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <Link
+                                            href="/settings"
+                                            className="block w-full font-baskervville"
+                                        >
+                                            Settings
+                                        </Link>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>
+                                        <Link
+                                            href={route("logout")}
+                                            method="post"
+                                            as="button"
+                                            className="block w-full text-left font-baskervville"
+                                        >
+                                            Sign Out
+                                        </Link>
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
+                        ) : (
+                            <div className="flex gap-x-6">
+                                <Link
+                                    href={route("login")}
+                                    className="text-xl font-kaisei hover:underline underline-offset-2 decoration-1"
+                                >
+                                    SIGN IN
+                                </Link>
+                                <Link
+                                    href={route("register")}
+                                    className="text-xl font-kaisei hover:underline underline-offset-2 decoration-1"
+                                >
+                                    REGISTER
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className="hidden py-2 bg-white shadow-md md:block">

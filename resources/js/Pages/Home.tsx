@@ -29,7 +29,7 @@ export default function Home() {
     return (
         <AuthenticatedLayout>
             <section className="relative mx-auto max-w-screen-2xl ">
-                <div className="flex flex-col justify-center h-screen px-3 pt-16 lg:pt-28">
+                <div className="flex flex-col justify-center h-screen px-3 ">
                     <div className="relative w-full md:h-[540px] h-[181px]">
                         <img
                             alt=""
@@ -380,7 +380,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="lg:max-w-6xl mx-auto pb-9 ">
+            <section className="mx-auto lg:max-w-6xl pb-9 ">
                 <div className="max-w-7xl mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
                 <h2 className="text-3xl text-center font-baskervville">
                     TOP FASHION{" "}
@@ -428,7 +428,7 @@ export default function Home() {
                                 src="https://images.unsplash.com/photo-1648634362534-238cb091708b?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt=""
                             ></img>
-                            <div className="text-center p-2">
+                            <div className="p-2 text-center">
                                 <p className="text-xs lg:text-base font-kaisei">
                                     Consectetur adipiscing elit. Curabitur eget
                                     vehicula ipsum. Donec tempus
@@ -505,7 +505,7 @@ export default function Home() {
                         <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
                             <div className="w-full h-full p-2">
                                 <img
-                                    className="w-full h-full object-cover"
+                                    className="object-cover w-full h-full"
                                     src="https://images.unsplash.com/photo-1452022449339-59005948ec5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Slide 1"
                                 />
@@ -514,7 +514,7 @@ export default function Home() {
                         <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
                             <div className="w-full h-full p-2">
                                 <img
-                                    className="w-full h-full object-cover"
+                                    className="object-cover w-full h-full"
                                     src="https://images.unsplash.com/photo-1452022449339-59005948ec5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Slide 2"
                                 />
@@ -523,7 +523,7 @@ export default function Home() {
                         <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
                             <div className="w-full h-full p-2">
                                 <img
-                                    className="w-full h-full object-cover"
+                                    className="object-cover w-full h-full"
                                     src="https://images.unsplash.com/photo-1617862516441-a9a5cf5284c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Slide 3"
                                 />
@@ -532,7 +532,7 @@ export default function Home() {
                         <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
                             <div className="w-full h-full p-2">
                                 <img
-                                    className="w-full h-full object-cover"
+                                    className="object-cover w-full h-full"
                                     src="https://images.unsplash.com/photo-1617862516441-a9a5cf5284c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Slide 3"
                                 />
