@@ -6,7 +6,8 @@ import { Link, usePage } from "@inertiajs/react";
 import { PropsWithChildren, ReactNode, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/solid";
-import React from "react";
+import React, { Fragment, useEffect, useRef } from "react";
+import { Button } from "@headlessui/react";
 import Footer from "@/Components/Footer";
 import {
     DropdownMenu,
@@ -22,6 +23,21 @@ export default function Authenticated({
     header,
     children,
 }: PropsWithChildren<{ header?: ReactNode }>) {
+    const navbarRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const handleClickOut = (event: MouseEvent) => {
+            if (
+                navbarRef.current &&
+                !navbarRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOut);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOut);
+        };
+    }, [navbarRef]);
     const user = usePage().props.auth.user;
     const currentUrl = usePage().url;
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
@@ -150,6 +166,65 @@ export default function Authenticated({
                             </NavLink>
                         ))}
                     </div>
+                </div>
+                <div className={`relative z-50 ${isOpen ? "block" : "hidden"}`}>
+                    <div className="fixed inset-0 bg-slate-600 opacity-10"></div>
+                    <nav
+                        ref={navbarRef}
+                        className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-r "
+                    >
+                        <div className="flex mb-3 underline underline-offset-2">
+                            <Link href="/" className="">
+                                <span className="object-center text-xl font-medium tracking-wide bg-center bg-repeat drop-shadow-xl hover:drop-shadow-sm bg-clip-text">
+                                    LOREM IPSUM
+                                </span>
+                            </Link>
+                            <button
+                                className="ml-auto"
+                                onClick={() => closeNavbar(!isOpen)}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="w-6 h-6"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="flex flex-col gap-y-4">
+                            {listNavigate.map((item) => (
+                                <NavLink
+                                    key={item.name}
+                                    href={item.to}
+                                    active={currentUrl === item.to}
+                                    className={
+                                        currentUrl === item.to
+                                            ? "text-black"
+                                            : ""
+                                    }
+                                >
+                                    {item.name}
+                                </NavLink>
+                            ))}
+                        </div>
+                        <div className="mt-auto">
+                            <div className="flex flex-col pt-6 gap-y-6 ">
+                                <Button>LOGIN</Button>
+                                <Button>SIGN IN</Button>
+                            </div>
+                            <p className="my-4 text-xs text-center text-gray-400">
+                                <span> © 2023 Tensei, Inc.</span>
+                            </p>
+                        </div>
+                    </nav>
                 </div>
             </header>
             <main>{children}</main>

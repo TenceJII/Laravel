@@ -207,7 +207,7 @@ export default function News() {
                                 <div className="relative w-full ">
                                     <img src={image16} alt="" />
                                 </div>
-                                <div className="px-5">
+                                <div className="lg:px-5">
                                     <h1 className="text-2xl font-medium lg:text-4xl font-baskervville ">
                                         Consectetur elit. Curabitur eget
                                         vehicula ipsum. sectetur Curabi
