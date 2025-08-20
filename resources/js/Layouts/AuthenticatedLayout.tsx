@@ -7,7 +7,7 @@ import { PropsWithChildren, ReactNode, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/solid";
 import React, { Fragment, useEffect, useRef } from "react";
-import { Button } from "@headlessui/react";
+import { Button } from "@/Components/ui/button";
 import Footer from "@/Components/Footer";
 import {
     DropdownMenu,
@@ -52,11 +52,14 @@ export default function Authenticated({
         console.log(val);
         setIsOpen(val);
     };
-
+    const [isNewsOpen, setIsNewsOpen] = useState(false);
     const listNavigate = [
         { name: "HOME", to: "/home" },
         { name: "DASHBOARD", to: "/dashboard" },
-        { name: "NEW,S", to: "/news" },
+        {
+            name: "NEW,S",
+            to: "/news",
+        },
         { name: "FASHION", to: "/Fashion" },
         { name: "LOREM IDNs", to: "/Lorem IDNs" },
         { name: "LOREM Worlds", to: "/Lorem Worlds" },
@@ -65,7 +68,7 @@ export default function Authenticated({
     return (
         <div className="">
             <header className="z-20 w-full ">
-                <div className="flex items-center w-full px-2 py-4 bg-white border-b border-black xl:px-16">
+                <div className="flex items-center justify-between w-full px-2 py-4 bg-white border-b border-black xl:px-16">
                     <div className="flex items-center lg:flex-col md:mx-auto gap-x-2">
                         <div className="block md:hidden ">
                             <Bars3Icon
@@ -88,7 +91,7 @@ export default function Authenticated({
                             </div>
                         </div>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="block">
                         {user ? (
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
@@ -153,20 +156,86 @@ export default function Authenticated({
                 </div>
                 <div className="hidden py-2 bg-white shadow-md md:block">
                     <div className="flex justify-center font-medium gap-x-9">
-                        {listNavigate.map((item) => (
-                            <NavLink
-                                key={item.name}
-                                href={item.to}
-                                active={currentUrl === item.to}
-                                className={
-                                    currentUrl === item.to ? "text-black" : ""
-                                }
-                            >
-                                {item.name}
-                            </NavLink>
-                        ))}
+                        {listNavigate.map((item) =>
+                            item.name === "NEW,S" ? (
+                                <div
+                                    key={item.name}
+                                    className="relative"
+                                    onMouseEnter={() => setIsNewsOpen(true)}
+                                    onMouseLeave={() => setIsNewsOpen(false)}
+                                >
+                                    <Link
+                                        href={item.to}
+                                        className={classNames(
+                                            currentUrl === item.to &&
+                                                "border-b-2 border-black flex items-center"
+                                        )}
+                                        onClick={() => setIsNewsOpen(true)}
+                                    >
+                                        {item.name}
+                                    </Link>
+
+                                    {isNewsOpen && (
+                                        <div className="absolute left-0 z-50 w-48 bg-white border border-black shadow-lg">
+                                            <Link
+                                                href="/news/latest"
+                                                className="block px-4 py-2 hover:bg-gray-100"
+                                            >
+                                                Latest
+                                            </Link>
+                                            <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01]"></div>
+
+                                            <Link
+                                                href="/news/sports"
+                                                className="block px-4 py-2 hover:bg-gray-100"
+                                            >
+                                                Sports
+                                            </Link>
+                                            <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01]"></div>
+
+                                            <Link
+                                                href="/news/entertainment"
+                                                className="block px-4 py-2 hover:bg-gray-100"
+                                            >
+                                                Entertainment
+                                            </Link>
+                                            <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01]"></div>
+
+                                            <Link
+                                                href="/news/technology"
+                                                className="block px-4 py-2 hover:bg-gray-100"
+                                            >
+                                                Technology
+                                            </Link>
+                                            <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01]"></div>
+
+                                            <Link
+                                                href="/news/technology"
+                                                className="block px-4 py-2 hover:bg-gray-100"
+                                            >
+                                                News
+                                            </Link>
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <NavLink
+                                    key={item.name}
+                                    href={item.to}
+                                    active={currentUrl === item.to}
+                                    className={classNames(
+                                        currentUrl === item.to
+                                            ? "border-b-2 border-black"
+                                            : "border-b-2 border-transparent"
+                                    )}
+                                >
+                                    {item.name}
+                                </NavLink>
+                            )
+                        )}
                     </div>
                 </div>
+
                 <div className={`relative z-50 ${isOpen ? "block" : "hidden"}`}>
                     <div className="fixed inset-0 bg-slate-600 opacity-10"></div>
                     <nav
@@ -207,8 +276,8 @@ export default function Authenticated({
                                     active={currentUrl === item.to}
                                     className={
                                         currentUrl === item.to
-                                            ? "text-black"
-                                            : ""
+                                            ? "border-b-2 !border-black text-black"
+                                            : "border-b-2 border-transparent"
                                     }
                                 >
                                     {item.name}

@@ -243,11 +243,11 @@ export default function Home() {
             </section>
             <section className="container mx-auto">
                 <div className="h-full">
-                    <div className="max-w-7xl mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
+                    <div className="container mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
                     <div className="flex justify-center font-[HVMuseRegular] text-3xl ">
                         TOP TREND
                     </div>
-                    <div className="max-w-7xl mx-auto  mt-5  h-[1px] bg-[#401D01] "></div>
+                    <div className="container mx-auto  mt-5  h-[1px] bg-[#401D01] "></div>
                     <div className="px-3 lg:grid py-9 md:grid-cols-12">
                         <div className="grid col-start-2 col-end-5">
                             <div className="flex flex-col">
@@ -380,95 +380,97 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="mx-auto lg:max-w-6xl pb-9 ">
-                <div className="max-w-7xl mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
+            <section className="container mx-auto pb-9 ">
+                <div className="container mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
                 <h2 className="text-3xl text-center font-baskervville">
                     TOP FASHION{" "}
                 </h2>
-                <div className="max-w-7xl mx-auto  mt-5  h-[1px] bg-[#401D01] "></div>
-                <div className="gap-4 px-4 py-8 mx-auto md:grid md:grid-cols-12 ">
-                    <div className="col-start-1 col-end-4">
-                        <div className="">
-                            <div className="relative ">
+                <div className="container mx-auto  mt-5  h-[1px] bg-[#401D01] "></div>
+                <div className="flex items-center">
+                    <div className="gap-4 px-4 py-8 mx-auto md:grid md:grid-cols-11">
+                        <div className="col-start-1 col-end-4">
+                            <div className="">
+                                <div className="relative ">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1755389521304-51d55cec52d6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        className="w-full h-full"
+                                        alt=""
+                                    ></img>
+                                </div>
+                                <div className="p-2">
+                                    <p className="text-xs lg:text-base font-kaisei">
+                                        Consectetur adipiscing elit. Curabitur
+                                        eget vehicula ipsum. Donec tempus
+                                    </p>
+                                    <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
+                                        BY MONALISA MORALLES
+                                    </h2>
+                                </div>
+                            </div>
+                            <div className=" pt-9">
                                 <img
-                                    src="https://assets.vogue.com/photos/660f06a1bdcb88bbe9068164/1:1/w_640,c_limit/emily-wang-a5917t2ea8I-unsplash.jpg"
-                                    className="w-full h-full"
+                                    src="https://images.unsplash.com/photo-1703585222667-89afb3f98fd3?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt=""
                                 ></img>
-                            </div>
-                            <div className="p-2">
-                                <p className="text-xs lg:text-base font-kaisei">
-                                    Consectetur adipiscing elit. Curabitur eget
-                                    vehicula ipsum. Donec tempus
-                                </p>
-                                <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
-                                    BY MONALISA MORALLES
-                                </h2>
-                            </div>
-                        </div>
-                        <div className=" pt-9">
-                            <img
-                                src="https://images.unsplash.com/photo-1703585222667-89afb3f98fd3?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt=""
-                            ></img>
-                            <div className="p-2">
-                                <p className="text-xs lg:text-base font-kaisei">
-                                    Consectetur adipiscing elit. Curabitur eget
-                                    vehicula ipsum. Donec tempus
-                                </p>
-                                <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
-                                    BY MONALISA MORALLES
-                                </h2>
+                                <div className="p-2">
+                                    <p className="text-xs lg:text-base font-kaisei">
+                                        Consectetur adipiscing elit. Curabitur
+                                        eget vehicula ipsum. Donec tempus
+                                    </p>
+                                    <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
+                                        BY MONALISA MORALLES
+                                    </h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-start-4 col-end-10">
-                        <div className=" lg:pt-0 pt-9">
-                            <img
-                                src="https://images.unsplash.com/photo-1648634362534-238cb091708b?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt=""
-                            ></img>
-                            <div className="p-2 text-center">
-                                <p className="text-xs lg:text-base font-kaisei">
-                                    Consectetur adipiscing elit. Curabitur eget
-                                    vehicula ipsum. Donec tempus
-                                </p>
-                                <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
-                                    BY MONALISA MORALLES
-                                </h2>
+                        <div className="col-start-4 col-end-9">
+                            <div className=" lg:pt-0 pt-9">
+                                <img
+                                    src="https://plus.unsplash.com/premium_photo-1755534520276-7a75d7b70915?q=80&w=680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt=""
+                                ></img>
+                                <div className="p-2 text-center">
+                                    <p className="text-xs lg:text-base font-kaisei">
+                                        Consectetur adipiscing elit. Curabitur
+                                        eget vehicula ipsum. Donec tempus
+                                    </p>
+                                    <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
+                                        BY MONALISA MORALLES
+                                    </h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="md:col-start-10 md:col-end-13">
-                        <div className=" lg:pt-0 pt-9">
-                            <img
-                                src="https://assets.vogue.com/photos/660f06a1bdcb88bbe9068164/1:1/w_640,c_limit/emily-wang-a5917t2ea8I-unsplash.jpg"
-                                alt="1"
-                            ></img>
-                            <div className="p-2">
-                                <p className="text-xs lg:text-base font-kaisei">
-                                    Consectetur adipiscing elit. Curabitur eget
-                                    vehicula ipsum. Donec tempus
-                                </p>
-                                <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
-                                    BY MONALISA MORALLES
-                                </h2>
+                        <div className="md:col-start-9 md:col-end-12">
+                            <div className=" lg:pt-0 pt-9">
+                                <img
+                                    src="https://images.unsplash.com/photo-1755543041886-41944f3e08c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="1"
+                                ></img>
+                                <div className="p-2">
+                                    <p className="text-xs lg:text-base font-kaisei">
+                                        Consectetur adipiscing elit. Curabitur
+                                        eget vehicula ipsum. Donec tempus
+                                    </p>
+                                    <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1">
+                                        BY MONALISA MORALLES
+                                    </h2>
+                                </div>
                             </div>
-                        </div>
-                        <div className=" pt-9">
-                            <img
-                                src="https://images.unsplash.com/photo-1715112845275-9bf2f802d12c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="1"
-                            ></img>
-                            <div className="p-2">
-                                <p className="text-xs lg:text-base font-kaisei">
-                                    Consectetur adipiscing elit. Curabitur eget
-                                    vehicula ipsum. Donec tempus
-                                </p>
-                                <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1 text ">
-                                    BY MONALISA MORALLES
-                                </h2>
+                            <div className=" pt-9">
+                                <img
+                                    src="https://images.unsplash.com/photo-1715112845275-9bf2f802d12c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="1"
+                                ></img>
+                                <div className="p-2">
+                                    <p className="text-xs lg:text-base font-kaisei">
+                                        Consectetur adipiscing elit. Curabitur
+                                        eget vehicula ipsum. Donec tempus
+                                    </p>
+                                    <h2 className="text-sm tracking-widest md:mt-5 md:text-base font-baskervville hover:underline underline-offset-1 text ">
+                                        BY MONALISA MORALLES
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -99,11 +99,7 @@ export default function News() {
                         </div>
                     </div>
 
-                    <div className="flex justify-center col-start-6 col-end-7">
-                        <div className="w-[1px] h-full bg-gray-400"></div>
-                    </div>
-
-                    <div className="col-start-7 col-end-10">
+                    <div className="col-start-6 col-end-10">
                         <div className="flex flex-col">
                             <img src={image14} alt="" />
                             <h1 className="text-2xl font-baskervville ">
@@ -134,11 +130,8 @@ export default function News() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center col-start-10 col-end-11">
-                        <div className="w-[1px] h-full bg-gray-400"></div>
-                    </div>
-                    <div className="col-start-11 col-end-13">
-                        <div className="py-2">
+                    <div className="col-start-10 col-end-13">
+                        <div className="">
                             <img src={image14} alt="" />
                             <p className="mt-5 text-justify font-baskervville">
                                 Lorem ipsum dolor sit amet, consectetur
@@ -151,8 +144,7 @@ export default function News() {
                                 <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
                             </div>
                         </div>
-                        <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
-                        <div className="py-2">
+                        <div className="pt-2">
                             <img src={image14} alt="" />
                             <p className="mt-5 text-justify font-baskervville">
                                 Lorem ipsum dolor sit amet, consectetur

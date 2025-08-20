@@ -36,7 +36,7 @@ export default function Footer() {
                     </div>
                     <div className="col-start-7 col-end-9">
                         <div className="my-5 md:my-8">
-                            <h1 className="text-base font-semibold tracking-widest">
+                            <h1 className="text-base font-semibold tracking-widest underline underline-offset-1">
                                 ABOUT US
                             </h1>
                         </div>
@@ -60,7 +60,7 @@ export default function Footer() {
                     <div className="col-start-9 col-end-11">
                         <div className="">
                             <div className="my-5 md:my-8">
-                                <h1 className="text-base font-semibold tracking-widest">
+                                <h1 className="text-base tracking-widest underline font-semibol underline-offset-1">
                                     {" "}
                                     SERVICE
                                 </h1>

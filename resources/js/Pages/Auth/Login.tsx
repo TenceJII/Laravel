@@ -56,7 +56,7 @@ export default function Login({
                     <InputError message={errors.email} className="mt-2" />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4 ">
                     <InputLabel htmlFor="password" value="Password" />
 
                     <TextInput
@@ -64,7 +64,7 @@ export default function Login({
                         type="password"
                         name="password"
                         value={data.password}
-                        className="block w-full mt-1"
+                        className="block w-full mt-1 "
                         autoComplete="current-password"
                         onChange={(e) => setData("password", e.target.value)}
                     />
@@ -84,13 +84,13 @@ export default function Login({
                                 )
                             }
                         />
-                        <span className="text-sm text-gray-600 ms-2">
+                        <span className="text-sm text-gray-600 ms-2 font-ArchivoBlack">
                             Remember me
                         </span>
                     </label>
                 </div>
 
-                <div className="flex items-center justify-end mt-4">
+                <div className="flex items-center justify-end mt-4 font-ArchivoBlack">
                     {canResetPassword && (
                         <Link
                             href={route("password.request")}
@@ -100,7 +100,10 @@ export default function Login({
                         </Link>
                     )}
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <PrimaryButton
+                        className="ms-4 font-ArchivoBlack"
+                        disabled={processing}
+                    >
                         Log in
                     </PrimaryButton>
                 </div>
