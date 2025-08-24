@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
             </section>
             <section className="container mx-auto">
-                <div className="relative w-full h-full px-3 py-14 md:py-24 ">
+                <div className="relative w-full h-full px-3 ">
                     <div className="relative font-light text-[7.625vw] lg:text-[6.9vw] h-[2em] xl:pt-0 block ">
                         <div className="block text-right lg:text-left leading-[0.84em] ">
                             <div className="text-right lg:text-left">
@@ -114,8 +114,8 @@ export default function Home() {
                     <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01]"></div>
                     <div className="pt-5 md:grid md:grid-cols-12 gap-x-4">
                         <div className="col-end-5 md:col-start-1 xl:col-start-2">
-                            <div className="">
-                                <div className="lg:w-[393px] relative">
+                            <div className="duration-75 hover:p-2 hover:bg-slate-100">
+                                <div className="">
                                     <img
                                         alt=""
                                         className="relative w-full h-auto"
@@ -135,8 +135,8 @@ export default function Home() {
                                     </h2>
                                 </div>
                             </div>
-                            <div className="py-4">
-                                <div className="lg:w-[393px] relative">
+                            <div className="py-4 duration-75 hover:p-2 hover:bg-slate-100">
+                                <div className="relative ">
                                     <img
                                         alt=""
                                         src="https://images.unsplash.com/photo-1718040506078-5a7b90746511?q=80&w=2077&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -156,8 +156,8 @@ export default function Home() {
                                     </h2>
                                 </div>
                             </div>
-                            <div className="py-4">
-                                <div className="lg:w-[393px] relative">
+                            <div className="py-4 duration-75 hover:p-2 hover:bg-slate-100">
+                                <div className="relative ">
                                     <img
                                         alt=""
                                         src="https://images.unsplash.com/photo-1519748771451-a94c596fad67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -250,7 +250,7 @@ export default function Home() {
                     <div className="container mx-auto  mt-5  h-[1px] bg-[#401D01] "></div>
                     <div className="px-3 lg:grid py-9 md:grid-cols-12">
                         <div className="grid col-start-2 col-end-5">
-                            <div className="flex flex-col">
+                            <div className="flex flex-col p-2 hover:bg-slate-100">
                                 <h1 className="text-2xl font-baskervville ">
                                     <span className="italic">Consectetur </span>{" "}
                                     elit. Curabitur eget{" "}
@@ -278,7 +278,7 @@ export default function Home() {
                                     <div className="w-full lg:mt-0 h-[1px] bg-[#401D01] "></div>
                                 </div>
                             </div>
-                            <div className="flex flex-col py-8">
+                            <div className="flex flex-col p-2 py-8 hover:bg-slate-100">
                                 <h1 className="text-2xl font-baskervville ">
                                     <span className="italic">Consectetur </span>{" "}
                                     elit. Curabitur eget{" "}
@@ -309,7 +309,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="grid col-start-6 col-end-9">
-                            <div className="flex flex-col ">
+                            <div className="flex flex-col p-2 hover:bg-slate-100">
                                 <h1 className="text-2xl font-baskervville ">
                                     <span className="italic">Consectetur </span>{" "}
                                     elit. Curabitur eget{" "}
@@ -338,7 +338,7 @@ export default function Home() {
                                     <div className="w-full lg:mt-0 h-[1px] bg-[#401D01] "></div>
                                 </div>
                             </div>
-                            <div className="flex flex-col py-8">
+                            <div className="flex flex-col p-2 py-8 hover:bg-slate-100">
                                 <h1 className="text-2xl font-baskervville ">
                                     <span className="italic">Consectetur </span>{" "}
                                     elit. Curabitur eget{" "}
@@ -389,7 +389,7 @@ export default function Home() {
                 <div className="flex items-center">
                     <div className="gap-4 px-4 py-8 mx-auto md:grid md:grid-cols-11">
                         <div className="col-start-1 col-end-4">
-                            <div className="">
+                            <div className="p-2 hover:bg-slate-100">
                                 <div className="relative ">
                                     <img
                                         src="https://images.unsplash.com/photo-1755389521304-51d55cec52d6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -407,7 +407,7 @@ export default function Home() {
                                     </h2>
                                 </div>
                             </div>
-                            <div className=" pt-9">
+                            <div className="p-2 pt-9 hover:bg-slate-100">
                                 <img
                                     src="https://images.unsplash.com/photo-1703585222667-89afb3f98fd3?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt=""
@@ -423,7 +423,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-start-4 col-end-9">
+                        <div className="col-start-4 col-end-9 p-2 hover:bg-slate-100">
                             <div className=" lg:pt-0 pt-9">
                                 <img
                                     src="https://plus.unsplash.com/premium_photo-1755534520276-7a75d7b70915?q=80&w=680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -442,7 +442,7 @@ export default function Home() {
                         </div>
 
                         <div className="md:col-start-9 md:col-end-12">
-                            <div className=" lg:pt-0 pt-9">
+                            <div className="p-2 lg:pt-0 pt-9 hover:bg-slate-100">
                                 <img
                                     src="https://images.unsplash.com/photo-1755543041886-41944f3e08c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="1"
@@ -457,7 +457,7 @@ export default function Home() {
                                     </h2>
                                 </div>
                             </div>
-                            <div className=" pt-9">
+                            <div className="p-2  pt-9 hover:bg-slate-100">
                                 <img
                                     src="https://images.unsplash.com/photo-1715112845275-9bf2f802d12c?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="1"

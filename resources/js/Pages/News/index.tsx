@@ -9,6 +9,8 @@ import image14 from "@/assets/image14.png";
 import image15 from "@/assets/image15.png";
 import image16 from "@/assets/image16.png";
 import image17 from "@/assets/image17.png";
+import { Link, usePage } from "@inertiajs/react";
+
 export default function News() {
     return (
         <Authenticated>
@@ -63,100 +65,89 @@ export default function News() {
                     </div>
                 </div>
                 <div className=" mx-auto  mb-5  h-[1px] bg-[#401D01] "></div>
-                <h2 className="text-4xl tracking-[-0.1em] font-semibold font-ArchivoBlack">
-                    NEWS PAPERS
-                </h2>
-                <div className="gap-2 py-6 lg:grid lg:grid-cols-12">
-                    <div className="col-start-1 col-end-6">
-                        <div className="flex flex-col">
-                            <img src={image4} alt="" />
-                            <h1 className="text-2xl font-baskervville ">
-                                <span className="italic">Consectetur </span>{" "}
-                                elit. Curabitur eget{" "}
-                                <span className="block ">
-                                    {" "}
-                                    vehicula{" "}
-                                    <span className="font-semibold">
-                                        {" "}
-                                        ipsum.
-                                    </span>
-                                </span>
-                            </h1>
-                            <p className="mt-5 font-baskervville">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Curabitur eget vehicula ipsum.
-                                Donec tempus venenatis ante, vel vestibulum dui
-                                suscipit vitae. Praesent imperdiet convallis
-                                felis vitae malesuada. Phasellus a facilisis
-                                lectus.
-                            </p>
-                            <div className="flex items-center mt-5">
-                                <p className="w-full text-xs italic">
-                                    From : Maira /6/21/2024
-                                </p>
-                                <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
+                <div className="grid grid-cols-11 gap-x-5">
+                    <div className="col-start-1 col-end-5">
+                        <Link href="/hello/sup" className="py-3">
+                            <div className="flex flex-col p-2 hover:bg-slate-100">
+                                <div>
+                                    <h1 className="text-2xl font-baskervville ">
+                                        <span className="italic">
+                                            Consectetur{" "}
+                                        </span>{" "}
+                                        elit. Curabitur eget vehicula ipsum.
+                                    </h1>
+                                    <p className="mt-4 text-justify font-baskervville">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Curabitur eget vehicula
+                                        ipsum. Donec tempus venenatis ante, vel
+                                        vestibulum dui suscipit vitae. Praesent
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Curabitur eget vehicula
+                                        ipsum. Donec tempus venenatis ante, vel
+                                        vestibulum dui suscipit vitae. Praesent
+                                    </p>
+                                    <div className="flex items-center mt-5">
+                                        <p className="w-full text-xs italic">
+                                            From : Maira /6/21/2024
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img
+                                        className="mt-5"
+                                        src={image13}
+                                        alt=""
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </Link>
 
-                    <div className="col-start-6 col-end-10">
-                        <div className="flex flex-col">
-                            <img src={image14} alt="" />
-                            <h1 className="text-2xl font-baskervville ">
-                                <span className="italic">Consectetur </span>{" "}
-                                elit. Curabitur eget{" "}
-                                <span className="block ">
-                                    {" "}
-                                    vehicula{" "}
-                                    <span className="font-semibold">
-                                        {" "}
-                                        ipsum.
-                                    </span>
-                                </span>
-                            </h1>
-                            <p className="mt-5 font-baskervville">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Curabitur eget vehicula ipsum.
-                                Donec tempus venenatis ante, vel vestibulum dui
-                                suscipit vitae. Praesent imperdiet convallis
-                                felis vitae malesuada. Phasellus a facilisis
-                                lectus.
-                            </p>
-                            <div className="flex items-center mt-5">
-                                <p className="w-full text-xs italic">
-                                    From : Maira /6/21/2024
+                        <div className="w-full lg:mt-3 h-[1px] bg-[#401D01]"></div>
+                        <Link href="/hallo/sup" className="py-3 ">
+                            <div className="p-2 hover:bg-slate-100">
+                                <h1 className="text-2xl font-baskervville ">
+                                    <span className="italic">Consectetur </span>{" "}
+                                    elit. Curabitur eget vehicula ipsum.
+                                </h1>
+                                <p className="mt-4 text-justify font-baskervville">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Curabitur eget vehicula
+                                    ipsum. Donec tempus venenatis ante, vel
+                                    vestibulum dui
                                 </p>
-                                <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
+                                <div className="flex items-center mt-5">
+                                    <p className="w-full text-xs italic">
+                                        From : Maira /6/21/2024
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-start-10 col-end-13">
-                        <div className="">
-                            <img src={image14} alt="" />
-                            <p className="mt-5 text-justify font-baskervville">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Curabitur eget vehicula ipsum.
-                            </p>
-                            <div className="flex items-center mt-5">
-                                <p className="w-full text-xs italic">
-                                    From : Maira /6/21/2024
+                        </Link>
+                        <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
+
+                        <Link href="/hallo/sup" className="py-3">
+                            <div className="p-2 hover:bg-slate-100">
+                                <h1 className="text-2xl font-baskervville ">
+                                    <span className="italic">Consectetur </span>{" "}
+                                    elit. Curabitur eget vehicula ipsum.
+                                </h1>
+                                <p className="mt-4 text-justify font-baskervville">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Curabitur eget vehicula
+                                    ipsum. Donec tempus venenatis ante, vel
+                                    vestibulum dui suscipit vitae. Praesent
+                                    Lorem ipsum dolor sit amet, consectetur vel
+                                    vestibulum dui suscipit vitae. Praesent
+                                    adipiscing elit. Curabitur eget vehicula
+                                    ipsum. Donec tempus venenatis ante, vel
+                                    vestibulum dui suscipit vitae. Praesent
                                 </p>
-                                <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
+                                <div className="flex items-center mt-5">
+                                    <p className="w-full text-xs italic">
+                                        From : Maira /6/21/2024
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="pt-2">
-                            <img src={image14} alt="" />
-                            <p className="mt-5 text-justify font-baskervville">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Curabitur eget vehicula ipsum.
-                            </p>
-                            <div className="flex items-center mt-5">
-                                <p className="w-full text-xs italic">
-                                    From : Maira /6/21/2024
-                                </p>
-                                <div className="w-full lg:mt-0 h-[1px] bg-[#401D01]"></div>
-                            </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -167,7 +158,7 @@ export default function News() {
                 </h2>
                 <div className="py-3 lg:grid lg:grid-cols-12 lg:gap-x-9 gap-x-2">
                     <div className="col-start-1 col-end-7 ">
-                        <div className="flex flex-col justify-center lg:flex-row">
+                        <div className="flex flex-col justify-center py-3 lg:flex-row hover:bg-slate-100">
                             <div className="order-2 px-2 lg:order-1">
                                 <h1 className="text-2xl font-baskervville ">
                                     <span className="italic">Consectetur </span>{" "}
@@ -194,7 +185,7 @@ export default function News() {
                                 <img src={image15} alt="" />
                             </div>
                         </div>
-                        <div className="flex-col py-7">
+                        <div className="flex-col py-7 hover:bg-slate-100">
                             <div className=" lg:flex">
                                 <div className="relative w-full ">
                                     <img src={image16} alt="" />
@@ -223,7 +214,7 @@ export default function News() {
                         </div>
                     </div>
                     <div className="col-start-7 col-end-13">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col p-2 hover:bg-slate-100">
                             <img className="" src={image17} alt="" />
                             <div>
                                 <div className="flex items-center mt-5">

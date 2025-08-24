@@ -40,8 +40,7 @@ export default function Authenticated({
     }, [navbarRef]);
     const user = usePage().props.auth.user;
     const currentUrl = usePage().url;
-    const [showingNavigationDropdown, setShowingNavigationDropdown] =
-        useState(false);
+    useState(false);
 
     const [isOpen, setIsOpen] = useState(false);
     const handleNavbar = (val: boolean) => {
@@ -78,13 +77,13 @@ export default function Authenticated({
                         </div>
                         <Link
                             href="/home"
-                            className="text-lg font-semibold tracking-widest md:text-3xl font-kaisei "
+                            className="text-xl font-semibold -tracking-widest md:text-6xl font-kaisei "
                         >
                             LOREM IPSUM
                         </Link>
 
                         <div className="hidden lg:block">
-                            <div className="flex items-center gap-x-4 ">
+                            <div className="flex items-center font-semibold font-baskervville gap-x-4 ">
                                 <div className="w-20  h-[1px]  bg-black "></div>
                                 <p className="text-sm ">MAGAZINE</p>
                                 <div className="w-20  h-[1px]  bg-black "></div>
