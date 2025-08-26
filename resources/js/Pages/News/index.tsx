@@ -149,6 +149,32 @@ export default function News() {
                             </div>
                         </Link>
                     </div>
+                    <div className="col-start-6 col-end-11">
+                        <Link href="/hallo/sup" className="py-3">
+                            <div className="p-2 hover:bg-slate-100">
+                                <h1 className="text-2xl font-baskervville ">
+                                    <span className="italic">Consectetur </span>{" "}
+                                    elit. Curabitur eget vehicula ipsum.
+                                </h1>
+                                <p className="mt-4 text-justify font-baskervville">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Curabitur eget vehicula
+                                    ipsum. Donec tempus venenatis ante, vel
+                                    vestibulum dui suscipit vitae. Praesent
+                                    Lorem ipsum dolor sit amet, consectetur vel
+                                    vestibulum dui suscipit vitae. Praesent
+                                    adipiscing elit. Curabitur eget vehicula
+                                    ipsum. Donec tempus venenatis ante, vel
+                                    vestibulum dui suscipit vitae. Praesent
+                                </p>
+                                <div className="flex items-center mt-5">
+                                    <p className="w-full text-xs italic">
+                                        From : Maira /6/21/2024
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </section>
             <section className="container px-4 py-6 mx-auto">
